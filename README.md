@@ -9,7 +9,7 @@ It is a Rails codebase and uses a SQL (MariaDB in production) backend for the da
 
 You are free to use this code to start your own [sister site](https://github.com/lobsters/lobsters/wiki)
 because the code is available under a [permissive license](https://github.com/lobsters/lobsters/blob/master/LICENSE) (3-clause BSD).
-We welcome bug reports and code contributions that help use improve [lobste.rs](https://lobste.rs).
+We welcome bug reports and code contributions that help us improve [lobste.rs](https://lobste.rs).
 As a volunteer project we're reluctant to take on work that's not useful to our site, so please understand if we don't want to adopt your custom feature.
 
 
@@ -22,13 +22,13 @@ If you have questions, there is usually someone in [our chat room](https://lobst
 
 #### Initial setup
 
-Use the steps below for a local install or
+Use the steps below for a local installation or
 [lobsters-ansible](https://github.com/lobsters/lobsters-ansible) for our production deployment config.
 There's an external project [docker-lobsters](https://github.com/utensils/docker-lobsters) if you want to use Docker.
 
 * Install the Ruby version specified in [.ruby-version](https://github.com/lobsters/lobsters/blob/master/.ruby-version)
 
-* Checkout the lobsters git tree from Github
+* Checkout the lobsters git tree from GitHub
     ```sh
     $ git clone git@github.com:lobsters/lobsters.git
     $ cd lobsters
@@ -56,7 +56,7 @@ There's an external project [docker-lobsters](https://github.com/utensils/docker
       [this solution](https://stackoverflow.com/a/39628463/1042144).
 
 * Create a MySQL (other DBs supported by ActiveRecord may work, only MySQL and
-MariaDB have been tested) database, username, and password and put them in a
+MariaDB has been tested) database, username, and password and put them in a
 `config/database.yml` file.  You will also want a separate database for
 running tests:
 
@@ -108,7 +108,7 @@ running tests:
   There are more tools and options available than we can describe; find a guide or an expert.
   The lobsters-ansible repo has our config files to crib from. Some app-specific notes:
 
-* Set up crontab or another scheduler to run regular jobs:
+* Set up a crontab or another scheduler to run regular jobs:
 
     ```
     */5 * * * *  cd /path/to/lobsters && env RAILS_ENV=production sh -c 'bundle exec ruby script/mail_new_activity; bundle exec ruby script/post_to_twitter; bundle exec ruby script/traffic_range'
@@ -121,5 +121,5 @@ running tests:
 
 #### Administration
 
-Basic moderation happens on-site, but most other administrative tasks require use of the rails console in production.
+Basic moderation happens on-site, but most other administrative tasks require the use of the rails console in production.
 Administrators can create and edit tags at `/tags`.
